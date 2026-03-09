@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 import { MenuDesktop } from "../shared/Menu-Desktop";
+import { MenuMobile } from "../shared/Menu-Mobile";
+
+import { navLinks } from "@/data/public.data";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +27,7 @@ export function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-navy backdrop-blur-md border-b border-gold py-3" : "bg-transparent py-6"}`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-navy backdrop-blur-md border-b border-gold400 py-3" : "bg-transparent py-6"}`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -40,7 +43,7 @@ export function Navbar() {
           <MenuDesktop />
 
           <button
-            className="md:hidden text-gold cursor-pointer"
+            className="md:hidden text-gold400 cursor-pointer"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={30} /> : <Menu size={30} />}
@@ -49,6 +52,7 @@ export function Navbar() {
       </motion.nav>
 
       {/* Mobile Menu */}
+      <MenuMobile navLink={navLinks} open={open} setOpen={setOpen} />
     </>
   );
 }

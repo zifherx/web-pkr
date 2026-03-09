@@ -5,8 +5,13 @@ import {
   Check,
   CircleStop,
   Facebook,
+  FileSearchCorner,
   Instagram,
+  Lightbulb,
   Megaphone,
+  MessageSquare,
+  RefreshCw,
+  Rocket,
   Scale,
   Search,
   Shield,
@@ -20,7 +25,9 @@ import {
   IHomeStat,
   IService,
   ISlide,
+  IStep,
   ItemNavitagion,
+  ITestimonial,
 } from "@/interfaces";
 
 export const socialLinks = [
@@ -30,10 +37,10 @@ export const socialLinks = [
 ];
 
 export const navLinks: ItemNavitagion[] = [
-  { id: 1, label: "Inicio", href: "/#inicio" },
-  { id: 2, label: "Servicios", href: "/#servicios" },
-  { id: 3, label: "Nosotros", href: "/#nosotros" },
-  { id: 4, label: "Proceso", href: "/#proceso" },
+  { id: 1, label: "Inicio", href: "#inicio" },
+  { id: 2, label: "Servicios", href: "#servicios" },
+  { id: 3, label: "Nosotros", href: "#nosotros" },
+  { id: 4, label: "Proceso", href: "#proceso" },
   { id: 5, label: "Contacto", href: "/contact" },
 ];
 
@@ -226,4 +233,72 @@ export const benfitsHome: IBeginnings[] = [
   { id: 2, icon: Check, label: "Precisión" },
   { id: 3, icon: CircleStop, label: "Expertise" },
   { id: 4, icon: TrendingUp, label: "Crecimiento" },
+];
+
+export const stepsHome: IStep[] = [
+  {
+    id: 1,
+    icon: MessageSquare,
+    title: "Consulta Inicial",
+    description:
+      "Escuchamos tu situación actual, necesidades y objetivos. Sin compromisos, solo conversación.",
+  },
+  {
+    id: 2,
+    icon: FileSearchCorner,
+    title: "Diagnóstico",
+    description:
+      "Analizamos en profundidad tu estructura financiera, fiscal y operativa para identificar oportunidades.",
+  },
+  {
+    id: 3,
+    icon: Lightbulb,
+    title: "Estrategia",
+    description:
+      "Diseñamos un plan personalizado alineado con los objetivos específicos de tu empresa.",
+  },
+  {
+    id: 4,
+    icon: Rocket,
+    title: "Implementación",
+    description:
+      "Ejecutamos el plan con precisión y transparencia, manteniéndote informado en cada etapa del proceso.",
+  },
+  {
+    id: 5,
+    icon: RefreshCw,
+    title: "Seguimiento Continuo",
+    description:
+      "Monitoreamos resultados, ajustamos estrategias y garantizamos que tu empresa siga creciendo.",
+  },
+];
+
+export const testimonialsHome: ITestimonial[] = [
+  {
+    id: 1,
+    initials: "MR",
+    rating: 4,
+    name: "María Rodríguez",
+    role: "CEO",
+    company: "Importaciones MR SAC",
+    text: '"PKR transformó completamente nuestra gestión tributaria. Redujimos nuestra carga fiscal un 30% en el primer año, completamente dentro del marco legal."',
+  },
+  {
+    id: 2,
+    initials: "CL",
+    rating: 5,
+    name: "Carlos López",
+    role: "Gerente General",
+    company: "TechPeru EIRL",
+    text: '"El equipo de PKR es excepcionalmente profesional. Su asesoría contable nos ha dado la claridad financiera que necesitábamos para expandirnos."',
+  },
+  {
+    id: 3,
+    initials: "AP",
+    rating: 5,
+    name: "Ana Paredes",
+    role: "Directora",
+    company: "Grupo Paredes & Hijos",
+    text: '"La auditoría que realizó PKR nos permitió identificar ineficiencias que no habíamos notado. Hoy somos una empresa más sólida y transparente."',
+  },
 ];

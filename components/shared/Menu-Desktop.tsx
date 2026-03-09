@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+
 import { navLinks } from "@/data/public.data";
 
 export function MenuDesktop() {
@@ -22,8 +23,8 @@ export function MenuDesktop() {
               className={cn(
                 "text-sm tracking-widest uppercase font-medium transition-colors duration-200",
                 label === "Contacto"
-                  ? "bg-gold text-black px-5 py-2.5 hover:bg-gold/70 font-semibold"
-                  : "text-white hover:text-gold",
+                  ? "bg-gold400 text-black px-5 py-2.5 hover:bg-gold300 font-semibold"
+                  : "text-white hover:text-gold300",
               )}
             >
               {label}
@@ -31,7 +32,7 @@ export function MenuDesktop() {
           ) : (
             <a
               href={href}
-              className="text-sm tracking-widest uppercase font-medium text-white hover:text-gold transition-colors duration-200"
+              className="text-sm tracking-widest uppercase font-medium text-white hover:text-gold400 transition-colors duration-200"
             >
               {label}
             </a>

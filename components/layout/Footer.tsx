@@ -10,7 +10,7 @@ import { navLinks, servicesList, socialLinks } from "@/data/public.data";
 
 export function Footer() {
   return (
-    <footer className="bg-navy border-t border-gold/10 pt-16 pb-8">
+    <footer className="bg-navy border-t border-gold400/10 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           {/* Marca PKR Tributarios */}
@@ -25,7 +25,7 @@ export function Footer() {
                 />
               </div>
             </div>
-            <p className="text-grayText text-sm leading-relaxed mb-6">
+            <p className="text-ink200 text-sm leading-relaxed mb-6">
               Especialistas en procesos tributarios y contables. Soluciones
               personalizadas para impulsar el crecimiento empresarial.
             </p>
@@ -39,7 +39,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 border border-gold/20 flex items-center justify-center text-grayText hover:border-gold hover:text-gold transition-all duration-200"
+                  className="w-9 h-9 border border-gold400/20 flex items-center justify-center text-ink200 hover:border-gold400 hover:text-gold400 transition-all duration-200"
                 >
                   <Icon size={20} />
                 </Link>
@@ -50,7 +50,7 @@ export function Footer() {
           {/* Navegación */}
           <div>
             <h4 className="text-white text-sm font-semibold tracking-widest uppercase mb-5 flex items-center gap-2">
-              <span className="w-4 h-px bg-gold" />
+              <span className="w-4 h-px bg-gold400" />
               Navegación
             </h4>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export function Footer() {
           {/* Servicios */}
           <div>
             <h4 className="text-white text-sm font-semibold tracking-widest uppercase mb-5 flex items-center gap-2">
-              <span className="w-4 h-px bg-gold" />
+              <span className="w-4 h-px bg-gold400" />
               Servicios
             </h4>
             <ul className="space-y-3">
@@ -76,24 +76,24 @@ export function Footer() {
           {/* Contacto */}
           <div>
             <h4 className="text-white text-sm font-semibold tracking-widest uppercase mb-5 flex items-center gap-2">
-              <span className="w-4 h-px bg-gold" />
+              <span className="w-4 h-px bg-gold400" />
               Contacto
             </h4>
             <div className="space-y-4 text-sm text-white/60">
               <p>
-                <span className="text-gold block text-xs tracking-widest uppercase mb-1">
+                <span className="text-gold400 block text-xs tracking-widest uppercase mb-1">
                   Email
                 </span>
                 info@pkr.com.pe
               </p>
               <p>
-                <span className="text-gold block text-xs tracking-widest uppercase mb-1">
+                <span className="text-gold400 block text-xs tracking-widest uppercase mb-1">
                   Teléfono
                 </span>
                 +51 908 870 708
               </p>
               <p>
-                <span className="text-gold block text-xs tracking-widest uppercase mb-1">
+                <span className="text-gold400 block text-xs tracking-widest uppercase mb-1">
                   Horario
                 </span>
                 Lunes a Viernes

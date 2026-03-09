@@ -10,9 +10,9 @@ export function NavigationItem({ item }: NAVIGATION_ITEM_PROPS) {
     <li>
       <Link
         href={href}
-        className="text-white/60 text-sm hover:text-gold transition-colors flex items-center gap-2 group"
+        className="text-white/60 text-sm hover:text-gold400 transition-colors flex items-center gap-2 group"
       >
-        <span className="w-0 h-px bg-gold group-hover:w-4 transition-all duration-200" />
+        <span className="w-0 h-px bg-gold400 group-hover:w-4 transition-all duration-200" />
         {label}
       </Link>
     </li>
