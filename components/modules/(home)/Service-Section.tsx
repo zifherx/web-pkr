@@ -1,7 +1,8 @@
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+
 import { ServiceCard } from "@/components/shared/Service-Card";
 import { SERVICE_SECTION_PROPS } from "@/types";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 export function ServiceSection({ services }: SERVICE_SECTION_PROPS) {
   const ref = useRef(null);
@@ -19,8 +20,8 @@ export function ServiceSection({ services }: SERVICE_SECTION_PROPS) {
           className="mb-20"
         >
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-10 h-px bg-gold" />
-            <span className="text-gold text-xs tracking-[0.3em] uppercase">
+            <span className="w-10 h-px bg-gold400" />
+            <span className="text-gold400 text-xs tracking-[0.3em] uppercase">
               Nuestros Servicios
             </span>
           </div>
@@ -28,9 +29,9 @@ export function ServiceSection({ services }: SERVICE_SECTION_PROPS) {
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Soluciones integrales
               <br />
-              <span className="text-gold">para tu empresa</span>
+              <span className="text-gold400">para tu empresa</span>
             </h2>
-            <p className="text-[#F5F0ED] max-w-xs text-sm leading-relaxed">
+            <p className="text-pastel max-w-xs text-sm leading-relaxed">
               Cada servicio está diseñado para entregar resultados concretos y
               medibles que impulsen tu crecimiento.
             </p>

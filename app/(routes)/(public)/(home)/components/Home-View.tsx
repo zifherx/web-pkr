@@ -1,9 +1,10 @@
 "use client";
 
-import { HeroSection } from "./Hero-Section";
-import { StatsSection } from "./Stats-Section";
-import { AboutSection } from "./About-Section";
+import { HeroSection } from "@/components/modules/(home)/Hero-Section";
+import { StatsSection } from "@/components/modules/(home)/Stats-Section";
+import { AboutSection } from "@/components/modules/(home)/About-Section";
 import { ServiceSection } from "@/components/modules/(home)/Service-Section";
+import { ProcessSection } from "@/components/modules/(home)/Process-Section";
 
 import {
   aboutHome,
@@ -11,15 +12,22 @@ import {
   servicesList,
   slidesList,
   statsHome,
+  stepsHome,
+  testimonialsHome,
 } from "@/data/public.data";
+import { CTASection } from "@/components/modules/(home)/CTA-Section";
+import { TestimoniosSection } from "@/components/modules/(home)/Testimonios-Section";
 
 export function HomeView() {
   return (
-    <div>
+    <>
       <HeroSection slides={slidesList} />
       <StatsSection stats={statsHome} />
       <AboutSection rightContent={aboutHome} leftContent={benfitsHome} />
       <ServiceSection services={servicesList} />
-    </div>
+      <ProcessSection steps={stepsHome} />
+      <CTASection />
+      <TestimoniosSection testimonials={testimonialsHome} />
+    </>
   );
 }

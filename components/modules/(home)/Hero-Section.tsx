@@ -82,13 +82,13 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
             )}
           >
             {/* Decorative Frames */}
-            <div className="absolute -top-4 -left-4 w-[55%] h-[55%] border border-gold/25 pointer-events-none z-20" />
-            <div className="absolute -bottom-4 -right-4 w-[55%] h-[55%] border border-gold/15 pointer-events-none z-20" />
+            <div className="absolute -top-4 -left-4 w-[55%] h-[55%] border border-gold400/25 pointer-events-none z-20" />
+            <div className="absolute -bottom-4 -right-4 w-[55%] h-[55%] border border-gold400/15 pointer-events-none z-20" />
 
             {/* Gold corner accent */}
             <div className="absolute top-0 right-0 w-16 h-16 z-20 overflow-hidden">
-              <div className="absolute top-0 right-0 w-full h-0.5 bg-gold" />
-              <div className="absolute top-0 right-0 w-full h-0.5 bg-gold" />
+              <div className="absolute top-0 right-0 w-full h-0.5 bg-gold400" />
+              <div className="absolute top-0 right-0 w-full h-0.5 bg-gold400" />
             </div>
 
             {/* Image container */}
@@ -111,10 +111,10 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
 
               {/* Floating badge on image */}
               <div className="absolute bottom-6 left-6 right-6 z-10">
-                <div className="bg-black/80 backdrop-blur-sm border border-gold/30 py-4 px-5">
+                <div className="bg-black/80 backdrop-blur-sm border border-gold400/30 py-4 px-5">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gold/15 flex items-center justify-center shrink-0">
-                      <Shield strokeWidth={2} className="text-gold" />
+                    <div className="w-8 h-8 bg-gold400/15 flex items-center justify-center shrink-0">
+                      <Shield strokeWidth={2} className="text-gold400" />
                     </div>
                     <div>
                       <p className="text-white text-[0.78rem] font-semibold leading-tight">
@@ -142,7 +142,7 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-12 bg-linear-to-b from-transparent to-gold animate-pulse"
+          className="w-px h-12 bg-linear-to-b from-transparent to-gold400 animate-pulse"
         />
         Explorar
       </motion.div>

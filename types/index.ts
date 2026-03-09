@@ -4,10 +4,12 @@ import {
   IHomeStat,
   IService,
   ISlide,
+  IStep,
   ItemNavitagion,
+  ITestimonial,
 } from "@/interfaces";
 import { LucideIcon } from "lucide-react";
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import { IconType } from "react-icons";
 
 export type NAVIGATION_ITEM_PROPS = {
@@ -51,4 +53,26 @@ export type SERVICE_SECTION_PROPS = {
 export type SERVICE_CARD_PROPS = {
   service: IService;
   inView: boolean;
+};
+
+export type PROCESS_SECTION_PROPS = {
+  steps: IStep[];
+};
+
+export type TESTIMONIAL_SECTION_PROPS = {
+  testimonials: ITestimonial[];
+};
+
+export type TESTIMONIAL_CARD_PROPS = {
+  testimonial: ITestimonial;
+};
+
+export type RATING_STAR_PROPS = {
+  rating: number;
+};
+
+export type MENU_MOBILE_PROPS = {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  navLink: ItemNavitagion[];
 };
