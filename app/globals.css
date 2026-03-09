@@ -48,13 +48,21 @@
   /* Nuevos colores */
   --color-navy: var(--navy);
   --color-navyMid: var(--navyMid);
-  --color-gold: var(--gold);
-  --color-goldLight: var(--goldLight);
-  --color-goldPale: var(--goldPale);
-  --color-ink: var(--ink);
-  --color-grayText: var(--grayText);
-  --color-goldText: var(--goldText);
+  --color-gold50: var(--gold50);
+  --color-gold100: var(--gold100);
+  --color-gold300: var(--gold300);
+  --color-gold400: var(--gold400);
+  --color-gold500: var(--gold500);
+  --color-gold600: var(--gold600);
+  --color-ink100: var(--ink100);
+  --color-ink200: var(--ink200);
+  --color-ink400: var(--ink400);
+  --color-ink600: var(--ink600);
+  --color-ink700: var(--ink700);
+  --color-ink800: var(--ink800);
+  --color-ink900: var(--ink900);
   --color-pastel: var(--pastel);
+  --color-crema: var(--crema);
 }
 
 :root {
@@ -93,13 +101,21 @@
   /* Nuevos colores */
   --navy: oklch(0.1778 0.0316 261);
   --navyMid: oklch(0.2437 0.0614 261.77);
-  --gold: oklch(0.7356 0.1191 88.61);
-  --goldLight: oklch(0.8063 0.1042 85.65);
-  --goldPale: oklch(0.9008 0.0817 93.84);
-  --ink: oklch(0.1448 0 0);
-  --grayText: oklch(0.45 0 0);
-  --goldText: oklch(0.7534 0.1274 84.93);
-  --pastel: oklch(0.9653 0.0102 81.8);
+  --gold50: oklch(0.9874 0.0107 95.16);
+  --gold100: oklch(0.9628 0.0309 94.89);
+  --gold300: oklch(0.8432 0.1199 91.63);
+  --gold400: oklch(0.7534 0.1274 84.93);
+  --gold500: oklch(0.6595 0.1213 80.69);
+  --gold600: oklch(0.5716 0.1076 78.45);
+  --ink100: oklch(0.9067 0 0);
+  --ink200: oklch(0.738 0 0);
+  --ink400: oklch(0.4495 0 0);
+  --ink600: oklch(0.285 0 0);
+  --ink700: oklch(0.2178 0 0);
+  --ink800: oklch(0.1776 0 0);
+  --ink900: oklch(0.1448 0 0);
+  --pastel: oklch(96.531% 0.01013 81.701);
+  --crema: oklch(0.9324 0.0132 82.4);
 }
 
 .dark {
