@@ -34,11 +34,11 @@ export function SlideCard({
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-gold text-xs tracking-tight uppercase font-medium">
+            <span className="text-gold400 text-xs tracking-tight uppercase font-medium">
               {label}
             </span>
-            <span className="w-8 h-px bg-gold opacity-60" />
-            <span className="text-gold text-xs font-medium tracking-widest uppercase">
+            <span className="w-8 h-px bg-gold400 opacity-60" />
+            <span className="text-gold400 text-xs font-medium tracking-widest uppercase">
               {String(current + 1).padStart(2, "0")} /{" "}
               {String(total).padStart(2, "0")}
             </span>
@@ -56,7 +56,7 @@ export function SlideCard({
           >
             {headline}
             <br />
-            <span className="italic text-gold">{headlineItalic}</span>
+            <span className="italic text-gold400">{headlineItalic}</span>
           </motion.h1>
 
           <motion.p
@@ -69,7 +69,7 @@ export function SlideCard({
           </motion.p>
 
           <motion.p
-            className="text-gold text-sm italic mb-10 flex items-center gap-2"
+            className="text-gold400 text-sm italic mb-10 flex items-center gap-2"
             initial={{ opacity: 0, x: direction > 0 ? 60 : -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
@@ -78,7 +78,7 @@ export function SlideCard({
               delay: 0.15,
             }}
           >
-            <span className="w-5 h-px bg-gold" />
+            <span className="w-5 h-px bg-gold400" />
             {accent}
           </motion.p>
         </motion.div>
@@ -92,16 +92,16 @@ export function SlideCard({
       >
         <Link
           href="/contact"
-          className="bg-gold text-navy font-semibold tracking-wide hover:scale-110 hover:text-black transition-all duration-200 px-7 py-3.5 text-sm rounded-sm inline-block"
+          className="bg-gold400 text-navy font-semibold tracking-wide hover:scale-110 hover:text-black transition-all duration-200 px-7 py-3.5 text-sm rounded-sm inline-block"
         >
           {cta}
         </Link>
         <Link
           href="#servicios"
-          className="text-white text-sm tracking-widest uppercase hover:text-gold transition-colors duration-200 flex items-center gap-2 group"
+          className="text-white text-sm tracking-widest uppercase hover:text-gold400 transition-colors duration-200 flex items-center gap-2 group"
         >
           Ver servicios
-          <span className="w-6 h-px bg-gold group-hover:w-10 transition-all duration-300" />
+          <span className="w-6 h-px bg-gold400 group-hover:w-10 transition-all duration-300" />
         </Link>
       </motion.div>
 
@@ -112,7 +112,7 @@ export function SlideCard({
             onClick={() => goTo(i)}
             aria-label={`Ir a slide ${i + 1}`}
             aria-current={i === current ? "true" : undefined}
-            className={`h-1.5 rounded-sm cursor-pointer transition-all duration-300 ${i === current ? "w-6 bg-gold" : "w-1.5 bg-white"}`}
+            className={`h-1.5 rounded-sm cursor-pointer transition-all duration-300 ${i === current ? "w-6 bg-gold400" : "w-1.5 bg-white"}`}
           />
         ))}
       </div>

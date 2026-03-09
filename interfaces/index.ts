@@ -61,3 +61,20 @@ export interface IService {
   benefits: string[];
   cta: iCTAButton;
 }
+
+export interface IStep {
+  id: number;
+  icon: GENERAL_ICON_TYPE;
+  title: string;
+  description: string;
+}
+
+export interface ITestimonial {
+  id: number;
+  initials: string;
+  name: string;
+  rating: number;
+  role: string;
+  company: string;
+  text: string;
+}
