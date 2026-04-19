@@ -6,12 +6,8 @@ import { RevealWrapper } from "@/components/shared/Reveal-Wrapper";
 
 import { ABOUT_SECTION_PROPS } from "@/types";
 
-export function AboutSection({
-  rightContent,
-  leftContent,
-}: ABOUT_SECTION_PROPS) {
-  const { benefits, cta, focusTitle, paragrah, prefixTitle, suffixTitle, tag } =
-    rightContent;
+export function AboutSection({ rightContent, leftContent }: ABOUT_SECTION_PROPS) {
+  const { benefits, cta, focusTitle, paragrah, prefixTitle, suffixTitle, tag } = rightContent;
   const IconCTA = cta.icon;
 
   return (
@@ -29,18 +25,14 @@ export function AboutSection({
                     className="flex flex-col items-center gap-3 p-6 border border-gold400/10 text-white/70 hover:border-gold400 hover:text-gold400 transition-all duration-300"
                   >
                     <Icon className="text-2xl" />
-                    <span className="text-[0.72rem] tracking-[0.15rem] uppercase">
-                      {label}
-                    </span>
+                    <span className="text-[0.72rem] tracking-[0.15rem] uppercase">{label}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="absolute -bottom-6 -right-6 bg-gold400 px-6 py-5 flex-col items-center md:flex hidden">
-              <span className="text-4xl font-bold text-ink800 leading-none">
-                15+
-              </span>
+              <span className="text-4xl font-bold text-ink800 leading-none">15+</span>
               <span className="text-sm font-medium tracking-tight uppercase text-ink800 text-center mt-1">
                 Años de <br />
                 Experiencia
@@ -57,9 +49,7 @@ export function AboutSection({
           </p>
 
           <h2 className="text-5xl font-semibold text-ink800 leading-[1.15] mb-2">
-            {prefixTitle}{" "}
-            <em className="text-gold400 not-italic font-light">{focusTitle}</em>{" "}
-            {suffixTitle}
+            {prefixTitle} <em className="text-gold400 not-italic font-light">{focusTitle}</em> {suffixTitle}
           </h2>
 
           <div className="w-12 h-0.5 bg-linear-to-r from-gold to-gold400 mx-0 my-6" />
@@ -72,16 +62,17 @@ export function AboutSection({
 
           <div className="space-y-3 mb-8">
             {benefits.map((a) => (
-              <div
-                key={a}
-                className="flex items-center gap-3 text-[0.88rem] text-[#6b6459]"
-              >
+              <div key={a} className="flex items-center gap-3 text-[0.88rem] text-[#6b6459]">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold400 shrink-0" />
                 {a}
               </div>
             ))}
           </div>
 
+          {/* <ButtonSlide href="/contacto">
+            <IconCTA className="w-5 h-5 mr-2" strokeWidth={2} />
+            {cta.label}
+          </ButtonSlide> */}
           <Link
             href="/contacto"
             className="inline-flex items-center gap-2 py-3.5 px-9 bg-gold400 text-black text-sm font-semibold tracking-widest uppercase border border-gold400 cursor-pointer relative overflow-hidden hover:text-gold400 hover:bg-ink800 hover:transition-colors hover:duration-300 hover:border hover:border-ink800 hover:rounded-sm"
