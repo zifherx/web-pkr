@@ -1,22 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { SlideCard } from "@/components/shared/Slide-Card";
 import { cn } from "@/lib/utils";
 import { HOME_HERO_SECTION_PROPS } from "@/types";
-import Image from "next/image";
 import { Shield } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
   const [[current, direction], setSlide] = useState([0, 1]);
   const [autoplay, setAutoplay] = useState(true);
 
-  const resumeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
-    undefined,
-  );
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const paginate = useCallback((dir: number) => {
     setSlide(([prev]) => [(prev + dir + slides.length) % slides.length, dir]);
@@ -46,10 +44,7 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
   const slide = slides[current];
 
   return (
-    <section
-      id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden bg-navy"
-    >
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-navy">
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
@@ -63,22 +58,14 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="md:col-span-7 flex flex-col justify-center">
-            <SlideCard
-              slide={slide}
-              direction={direction}
-              current={current}
-              total={slides.length}
-              goTo={goTo}
-            />
+            <SlideCard slide={slide} direction={direction} current={current} total={slides.length} goTo={goTo} />
           </div>
 
           {/* Right Content */}
           <div
             className={cn(
               "relative hidden md:block md:col-span-5 transition-all duration-500",
-              autoplay
-                ? "opacity-100 translate-x-0 scale-100"
-                : "opacity-0 translate-x-6 scale-[0.98]",
+              autoplay ? "opacity-100 translate-x-0 scale-100" : "opacity-0 translate-x-6 scale-[0.98]"
             )}
           >
             {/* Decorative Frames */}
@@ -92,10 +79,7 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
             </div>
 
             {/* Image container */}
-            <div
-              className="relative overflow-hidden"
-              style={{ aspectRatio: "3/4", maxHeight: "600px" }}
-            >
+            <div className="relative overflow-hidden" style={{ aspectRatio: "3/4", maxHeight: "600px" }}>
               <Image
                 src={slide.imageUrl}
                 alt={slide.imageAlt}
@@ -111,18 +95,14 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
 
               {/* Floating badge on image */}
               <div className="absolute bottom-6 left-6 right-6 z-10">
-                <div className="bg-black/80 backdrop-blur-sm border border-gold400/30 py-4 px-5">
+                <div className="bg-black/50 backdrop-blur-sm border border-gold400/30 py-4 px-5">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-gold400/15 flex items-center justify-center shrink-0">
                       <Shield strokeWidth={2} className="text-gold400" />
                     </div>
                     <div>
-                      <p className="text-white text-[0.78rem] font-semibold leading-tight">
-                        Soluciones certificadas
-                      </p>
-                      <p className="text-white/45 text-[0.7rem] mt-0.5">
-                        Cumplimiento normativo garantizado
-                      </p>
+                      <p className="text-white text-[0.78rem] font-semibold leading-tight">Soluciones certificadas</p>
+                      <p className="text-white/45 text-[0.7rem] mt-0.5">Cumplimiento normativo garantizado</p>
                     </div>
                   </div>
                 </div>

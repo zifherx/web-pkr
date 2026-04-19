@@ -90,7 +90,7 @@ export function Footer() {
                 <span className="text-gold400 block text-xs tracking-widest uppercase mb-1">
                   Teléfono
                 </span>
-                +51 908 870 708
+                +51 926 924 472
               </p>
               <p>
                 <span className="text-gold400 block text-xs tracking-widest uppercase mb-1">

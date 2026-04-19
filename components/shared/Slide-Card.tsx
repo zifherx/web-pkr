@@ -91,7 +91,7 @@ export function SlideCard({
         className="flex flex-wrap items-center gap-4"
       >
         <Link
-          href="/contact"
+          href="/contacto<"
           className="bg-gold400 text-navy font-semibold tracking-wide hover:scale-110 hover:text-black transition-all duration-200 px-7 py-3.5 text-sm rounded-sm inline-block"
         >
           {cta}
