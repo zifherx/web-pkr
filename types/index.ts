@@ -7,6 +7,8 @@ import {
   IStep,
   ItemNavitagion,
   ITestimonial,
+  MailingTemplate,
+  TikTokVideo,
 } from "@/interfaces";
 import { LucideIcon } from "lucide-react";
 import { Dispatch, ReactNode, SetStateAction } from "react";
@@ -75,4 +77,38 @@ export type MENU_MOBILE_PROPS = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
   navLink: ItemNavitagion[];
+};
+
+export type CONTACTO_EMAIL_PROPS = {
+  propsEmail: MailingTemplate;
+};
+
+export type CONFIRMACION_EMAIL_PROPS = {
+  propsEmail: Partial<MailingTemplate>;
+};
+
+export type SERVICIO_VIEW_PROPS = {
+  slug: string;
+};
+
+export type SERVICE_PAGE_PROP = {
+  service: IService;
+};
+
+export type BUTTON_SLIDE_PROP = {
+  href: string;
+  children: ReactNode;
+  className?: string;
+};
+
+export type SERVICE_BREADCRUMB_PROPS = {
+  service: string;
+};
+
+export type TIKTOK_SECTION_PROPS = {
+  videos: TikTokVideo[];
+};
+
+export type TIKTOK_EMBED_PROPS = {
+  videId: string;
 };

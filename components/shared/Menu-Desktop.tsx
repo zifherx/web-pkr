@@ -10,16 +10,16 @@ import { navLinks } from "@/data/public.data";
 export function MenuDesktop() {
   return (
     <ul className="hidden md:flex items-center gap-8">
-      {navLinks.map(({ href, id, label }, i) => (
+      {navLinks.map(({ slug, id, label }, i) => (
         <motion.li
           key={id}
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 * i + 0.3 }}
         >
-          {href.startsWith("/") ? (
+          {slug.startsWith("/") ? (
             <Link
-              href={href}
+              href={slug}
               className={cn(
                 "text-sm tracking-widest uppercase font-medium transition-colors duration-200",
                 label === "Contacto"
@@ -31,7 +31,7 @@ export function MenuDesktop() {
             </Link>
           ) : (
             <a
-              href={href}
+              href={slug}
               className="text-sm tracking-widest uppercase font-medium text-white hover:text-gold400 transition-colors duration-200"
             >
               {label}

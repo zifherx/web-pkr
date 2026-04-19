@@ -1,11 +1,14 @@
 "use client";
 
-import { HeroSection } from "@/components/modules/(home)/Hero-Section";
-import { StatsSection } from "@/components/modules/(home)/Stats-Section";
 import { AboutSection } from "@/components/modules/(home)/About-Section";
-import { ServiceSection } from "@/components/modules/(home)/Service-Section";
+import { HeroSection } from "@/components/modules/(home)/Hero-Section";
 import { ProcessSection } from "@/components/modules/(home)/Process-Section";
+import { ServiceSection } from "@/components/modules/(home)/Service-Section";
+import { StatsSection } from "@/components/modules/(home)/Stats-Section";
 
+import { CTASection } from "@/components/modules/(home)/CTA-Section";
+import { TestimoniosSection } from "@/components/modules/(home)/Testimonios-Section";
+import { TikTokSection } from "@/components/modules/(home)/TikTok.Section";
 import {
   aboutHome,
   benfitsHome,
@@ -14,9 +17,8 @@ import {
   statsHome,
   stepsHome,
   testimonialsHome,
+  tiktokVideos,
 } from "@/data/public.data";
-import { CTASection } from "@/components/modules/(home)/CTA-Section";
-import { TestimoniosSection } from "@/components/modules/(home)/Testimonios-Section";
 
 export function HomeView() {
   return (
@@ -28,6 +30,7 @@ export function HomeView() {
       <ProcessSection steps={stepsHome} />
       <CTASection />
       <TestimoniosSection testimonials={testimonialsHome} />
+      <TikTokSection videos={tiktokVideos} />
     </>
   );
 }

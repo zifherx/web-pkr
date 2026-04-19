@@ -1,9 +1,11 @@
 import { GENERAL_ICON_TYPE } from "@/types";
+import { ContactoInput } from "@/validation/contacto.validation";
+import { Types } from "mongoose";
 
 export interface ItemNavitagion {
   id: number;
   label: string;
-  href: string;
+  slug: string;
 }
 
 export interface IStat {
@@ -52,14 +54,29 @@ export interface IBeginnings {
   label: string;
 }
 
+export interface IBenefit {
+  id: number;
+  label: string;
+}
+
+export interface IApproach {
+  id: number;
+  order: string;
+  label: string;
+  description: string;
+}
+
 export interface IService {
   id: number;
   icon: GENERAL_ICON_TYPE;
   label: string;
-  href: string;
-  description: string;
-  benefits: string[];
-  cta: iCTAButton;
+  primaryTitlePage: string;
+  secondaryTitlePage: string;
+  slug: string;
+  cardDescription: string;
+  pageDescription: string;
+  benefits: IBenefit[];
+  approach: IApproach[];
 }
 
 export interface IStep {
@@ -77,4 +94,65 @@ export interface ITestimonial {
   role: string;
   company: string;
   text: string;
+}
+
+export interface IContacto {
+  id: number;
+  icon: GENERAL_ICON_TYPE;
+  label: string;
+  value: string;
+}
+
+export interface ContactoResponse {
+  success: boolean;
+  message: string;
+}
+
+export interface MailPayload {
+  to: string;
+  subject: string;
+  html: string;
+  text: string;
+  replyTo?: string;
+}
+
+export interface IMailRepository {
+  send(payload: MailPayload): Promise<void>;
+}
+
+export interface MailingTemplate {
+  nombre_completo: string;
+  email: string;
+  telefono: string;
+  empresa?: string;
+  servicio_interes: string;
+  mensaje: string;
+  fecha?: string;
+}
+
+export interface IContactoRepository {
+  guardar(data: ContactoInput, ip?: string): Promise<ContactoRecord>;
+}
+
+export interface ContactoRecord extends ContactoInput {
+  _id: Types.ObjectId;
+  ip: string | null;
+  estado: "pendiente" | "respondido";
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface TikTokOEmbed {
+  html: string;
+  title: string;
+  author_name: string;
+}
+
+export interface TikTokVideo {
+  id: string;
+}
+
+export interface EmbedItem {
+  id: string;
+  title?: string;
 }
