@@ -5,12 +5,10 @@ import { motion } from "framer-motion";
 
 import { SERVICE_CARD_PROPS } from "@/types";
 import { cn } from "@/lib/utils";
-import { li } from "framer-motion/client";
+import { ArrowRight } from "lucide-react";
 
 export function ServiceCard({ service, inView }: SERVICE_CARD_PROPS) {
-  const { benefits, cta, description, href, icon: Icon, id, label } = service;
-
-  const IconCTA = cta.icon;
+  const { benefits, cardDescription, icon: Icon, id, label, slug } = service;
 
   return (
     <motion.div
@@ -34,23 +32,23 @@ export function ServiceCard({ service, inView }: SERVICE_CARD_PROPS) {
         {label}
       </h3>
 
-      <p className="text-ink200 text-sm leading-relaxed mb-6">{description}</p>
+      <p className="text-ink200 text-sm leading-relaxed mb-6">{cardDescription}</p>
 
       <ul className="space-y-2 mb-6">
-        {benefits.map((a) => (
-          <li key={a} className="text-xs text-ink200 flex items-center gap-2">
+        {benefits.slice(0,3).map(({id, label}) => (
+          <li key={id} className="text-xs text-ink200 flex items-center gap-2">
             <span className="w-3 h-px bg-gold500/60" />
-            {a}
+            {label}
           </li>
         ))}
       </ul>
 
       <Link
-        href={href}
+        href={`/servicios/${slug}`}
         className="inline-flex items-center gap-2 text-gold400/60 text-xs tracking-widest uppercase hover:text-gold400 hover:font-semibold transition-colors group/link"
       >
-        {cta.label}
-        <IconCTA
+        Ver Servicio
+        <ArrowRight
           size={16}
           className="group-hover/link:translate-x-1 transition-transform"
         />

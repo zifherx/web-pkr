@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { MENU_MOBILE_PROPS } from "@/types";
-import Link from "next/link";
 
 export function MenuMobile({ open, setOpen, navLink }: MENU_MOBILE_PROPS) {
   return (
@@ -16,11 +16,11 @@ export function MenuMobile({ open, setOpen, navLink }: MENU_MOBILE_PROPS) {
           className="fixed top-24 left-0 right-0 z-40 bg-ink800/90 backdrop-blur-md border-b border-gold500/20 md:hidden"
         >
           <ul className="flex flex-col py-6 px-6 gap-5">
-            {navLink.map(({ href, id, label }) => (
+            {navLink.map(({ slug, id, label }) => (
               <li key={id}>
-                {href.startsWith("/") ? (
+                {slug.startsWith("/") ? (
                   <Link
-                    href={href}
+                    href={slug}
                     onClick={() => setOpen(false)}
                     className="text-sm tracking-widest uppercase font-medium text-ink200 hover:text-gold400"
                   >
@@ -28,7 +28,7 @@ export function MenuMobile({ open, setOpen, navLink }: MENU_MOBILE_PROPS) {
                   </Link>
                 ) : (
                   <a
-                    href={href}
+                    href={slug}
                     onClick={() => setOpen(false)}
                     className="text-sm tracking-widest uppercase font-medium text-ink200 hover:text-gold400 transition-colors"
                   >
