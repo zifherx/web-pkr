@@ -1,9 +1,14 @@
 "use client";
 
 import { STATS_HOME_PROPS } from "@/types";
-import CountUp from "react-countup";
+import dynamic from "next/dynamic";
 
 export function StatsSection({ stats }: STATS_HOME_PROPS) {
+  const CountUp = dynamic(() => import("react-countup"), {
+    ssr: false,
+    loading: () => <span className="text-5xl text-gold400">0</span>,
+  });
+
   return (
     <section id="stats" className="bg-navyMid border-b border-gold400/10 py-10">
       <div className="max-w-7xl mx-auto px-8">
