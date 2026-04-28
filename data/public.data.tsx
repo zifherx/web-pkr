@@ -468,3 +468,11 @@ export const tiktokVideos: TikTokVideo[] = [
   { id: "7615351870332210450" },
   { id: "7611552531235212564" },
 ];
+
+export const SERVICE_IMAGES_CARD: Record<number, string> = {
+  1: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80", // documentos tributarios
+  2: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80", // contabilidad / laptop + gráficas
+  3: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", // auditoría / reunión profesional
+  4: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", // planificación financiera / gráficas
+  5: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=600&q=80", // gestión empresarial / equipo
+};
