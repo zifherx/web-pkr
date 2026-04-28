@@ -86,6 +86,7 @@ export function HeroSection({ slides }: HOME_HERO_SECTION_PROPS) {
                 fill
                 className="object-cover object-top"
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 0px, 480px"
               />
 

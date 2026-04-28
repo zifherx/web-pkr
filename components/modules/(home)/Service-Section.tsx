@@ -38,7 +38,7 @@ export function ServiceSection({ services }: SERVICE_SECTION_PROPS) {
         </motion.div>
 
         {/* Servicios Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
           {services.map((item) => (
             <ServiceCard key={item.slug} inView={inView} service={item} />
           ))}
