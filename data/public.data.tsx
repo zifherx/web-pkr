@@ -303,7 +303,7 @@ export const slidesList: ISlide[] = [
     cta: "Conocer más",
     accent: "Información financiera a tu alcance.",
     stat: { value: "15+", label: "años de experiencia" },
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=90&auto=format&fit=crop",
+    imageUrl: "/images/slides/slide-02.jpg",
     imageAlt: "Profesional financiera analizando documentos",
   },
   {
@@ -316,7 +316,7 @@ export const slidesList: ISlide[] = [
     cta: "Solicitar auditoría",
     accent: "Revisión integral con estándares internacionales.",
     stat: { value: "100%", label: "precisión garantizada" },
-    imageUrl: "/images/slides/slide-02.jpg",
+    imageUrl: "/images/slides/slide-03.jpg",
     imageAlt: "Reunión de negocios estratégica",
   },
   {
@@ -329,7 +329,7 @@ export const slidesList: ISlide[] = [
     cta: "Planificar ahora",
     accent: "Visión estratégica de largo plazo.",
     stat: { value: "3x", label: "retorno promedio" },
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=90&auto=format&fit=crop",
+    imageUrl: "/images/slides/slide-04.jpg",
     imageAlt: "Profesional financiera analizando documentos",
   },
   {
@@ -342,7 +342,7 @@ export const slidesList: ISlide[] = [
     cta: "Transformar empresa",
     accent: "Metodologías probadas de gestión.",
     stat: { value: "40%", label: "mejora en eficiencia" },
-    imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=90&auto=format&fit=crop",
+    imageUrl: "/images/slides/slide-05.jpeg",
     imageAlt: "Reunión de negocios estratégica",
   },
 ];
@@ -470,9 +470,9 @@ export const tiktokVideos: TikTokVideo[] = [
 ];
 
 export const SERVICE_IMAGES_CARD: Record<number, string> = {
-  1: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80", // documentos tributarios
-  2: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80", // contabilidad / laptop + gráficas
-  3: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", // auditoría / reunión profesional
-  4: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", // planificación financiera / gráficas
-  5: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=600&q=80", // gestión empresarial / equipo
+  1: "/images/services/service-01.jpg",
+  2: "/images/services/service-02.jpg",
+  3: "/images/services/service-03.jpg",
+  4: "/images/services/service-04.jpg",
+  5: "/images/services/service-05.jpg",
 };
