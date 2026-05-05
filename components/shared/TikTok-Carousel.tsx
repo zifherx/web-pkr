@@ -49,7 +49,7 @@ export function TikTokCarousel({ embeds }: { embeds: EmbedItem[] }) {
         <button
           onClick={prev}
           aria-label="Anterior"
-          className="w-11 h-11 border border-gold400/30 text-gold400 flex items-center justify-center hover:bg-gold400/10 transition-colors"
+          className="w-11 h-11 cursor-pointer border border-gold400/30 text-gold400 flex items-center justify-center hover:bg-gold400/10 transition-colors"
         >
           <ChevronLeft size={20} />
         </button>
@@ -68,7 +68,7 @@ export function TikTokCarousel({ embeds }: { embeds: EmbedItem[] }) {
         <button
           onClick={next}
           aria-label="Siguiente"
-          className="w-11 h-11 border border-gold400/30 text-gold400 flex items-center justify-center hover:bg-gold400/10 transition-colors"
+          className="w-11 h-11 cursor-pointer border border-gold400/30 text-gold400 flex items-center justify-center hover:bg-gold400/10 transition-colors"
         >
           <ChevronRight size={20} />
         </button>
